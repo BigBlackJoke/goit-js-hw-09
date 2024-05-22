@@ -83,15 +83,4 @@ const gallery = images.map(image => {
 
 imagesList.append(...gallery);
 
-// imagesList.addEventListener("click", event => {
-//     event.preventDefault();
-//     const bigImage = event.target.parentElement.href;
-//     new SimpleLightbox('', { /* options */ });
-//     // if (event.target.nodeName === 'IMG') {
-//     //     const bigImage = event.target.parentElement.href;
-//     //     const instance = basicLightbox.create(`
-//     //         <img src="${bigImage}" width="1112" height="640">`);
-//     //     instance.show();
-//     // }
-// });
-
+new SimpleLightbox('.gallery a', {captions: true, captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250});
