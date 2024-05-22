@@ -6,8 +6,8 @@ const email = inputFill.elements.email;
 const message = inputFill.elements.message;
 const localStorageKey = "feedback-form-state";
 
-inputFill.elements.email.value = JSON.parse(localStorage.getItem(localStorageKey) ?? "");
-inputFill.elements.message.value = JSON.parse(localStorage.getItem(localStorageKey) ?? "");
+inputFill.elements.email.value = JSON.parse(localStorage.getItem(localStorageKey) ?? "").email;
+inputFill.elements.message.value = JSON.parse(localStorage.getItem(localStorageKey) ?? "").message;
 
 inputFill.addEventListener("input", () => {
     formData.email = email.value;
