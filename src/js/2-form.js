@@ -11,6 +11,8 @@ const savingDataForm = localStorage.getItem(localStorageKey);
 if (savingDataForm) {
     message.value = JSON.parse(savingDataForm).message ?? "";
     email.value = JSON.parse(savingDataForm).email ?? "";
+    formData.email = JSON.parse(savingDataForm).email ?? "";
+    formData.message = JSON.parse(savingDataForm).message ?? "";
 }
 
 inputFill.addEventListener("input", () => {
